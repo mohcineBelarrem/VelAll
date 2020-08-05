@@ -25,9 +25,9 @@ struct Contract : Decodable {
     
     init(from decoder : Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
-        self.commercialName = try container.decodeIfPresent(String.self, forKey: .commercialName) ?? ""
-        self.countryCode = try container.decodeIfPresent(String.self, forKey: .countryCode) ?? ""
+        self.name = try container.decodeIfPresent(String.self, forKey: .name) ?? "No Name"
+        self.commercialName = try container.decodeIfPresent(String.self, forKey: .commercialName) ?? "No Commercial Name"
+        self.countryCode = try container.decodeIfPresent(String.self, forKey: .countryCode) ?? "No Country"
         self.cities = try container.decodeIfPresent([String].self, forKey: .cities) ?? [String]()
     }
     
