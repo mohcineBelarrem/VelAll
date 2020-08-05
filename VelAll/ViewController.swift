@@ -10,7 +10,11 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    public static let showContractSegueIdentifier = "showContract"
+    
     var contracts = [String:[Contract]]()
+    
+    var selectedContract : Contract!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -45,8 +49,23 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let country = Array(contracts.keys)[indexPath.section]
+        
+        guard let contractsListForCountry = contracts[country] else {return}
+        
+        selectedContract = contractsListForCountry[indexPath.row]
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: ViewController.showContractSegueIdentifier, sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == ViewController.showContractSegueIdentifier {
+            let mvc = segue.destination as! MapViewController
+            mvc.contractName = selectedContract.name
+            
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
