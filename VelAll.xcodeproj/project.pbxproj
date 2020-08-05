@@ -18,6 +18,7 @@
 		4B1C259824DB431600E6992B /* DataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1C259724DB431600E6992B /* DataRetriever.swift */; };
 		4B1C259A24DB4D1D00E6992B /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1C259924DB4D1D00E6992B /* NetworkModel.swift */; };
 		4B1C259C24DB511F00E6992B /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1C259B24DB511F00E6992B /* ApiKey.swift */; };
+		4B1C259E24DB57BA00E6992B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1C259D24DB57BA00E6992B /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4B1C259724DB431600E6992B /* DataRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRetriever.swift; sourceTree = "<group>"; };
 		4B1C259924DB4D1D00E6992B /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		4B1C259B24DB511F00E6992B /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
+		4B1C259D24DB57BA00E6992B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				4B1C257D24D9DCAD00E6992B /* AppDelegate.swift */,
 				4B1C257F24D9DCAD00E6992B /* SceneDelegate.swift */,
 				4B1C258124D9DCAD00E6992B /* ViewController.swift */,
+				4B1C259D24DB57BA00E6992B /* MapViewController.swift */,
 				4B1C259624DB430700E6992B /* New Group */,
 				4B1C259324D9EF2C00E6992B /* Model */,
 				4B1C258324D9DCAD00E6992B /* Main.storyboard */,
@@ -173,6 +176,7 @@
 				4B1C258224D9DCAD00E6992B /* ViewController.swift in Sources */,
 				4B1C259C24DB511F00E6992B /* ApiKey.swift in Sources */,
 				4B1C259524D9F0C100E6992B /* Station.swift in Sources */,
+				4B1C259E24DB57BA00E6992B /* MapViewController.swift in Sources */,
 				4B1C257E24D9DCAD00E6992B /* AppDelegate.swift in Sources */,
 				4B1C258024D9DCAD00E6992B /* SceneDelegate.swift in Sources */,
 				4B1C259A24DB4D1D00E6992B /* NetworkModel.swift in Sources */,
