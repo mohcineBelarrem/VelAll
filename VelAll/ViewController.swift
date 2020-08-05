@@ -14,6 +14,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     var contracts = [String:[Contract]]()
     
+    lazy var countriesSorted : [String] = {
+        return Array(contracts.keys).sorted()
+    }()
+    
     var selectedContract : Contract!
     
     @IBOutlet weak var tableView: UITableView!
@@ -24,7 +28,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let country = Array(contracts.keys)[section]
+        let country = countriesSorted[section]
         return contracts[country]?.count ?? 0
     }
     
@@ -32,7 +36,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cityCell")
         
-        let country = Array(contracts.keys)[indexPath.section]
+        let country = countriesSorted[indexPath.section]
         
         let contract = contracts[country]?[indexPath.row]
         
@@ -42,14 +46,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return Array(contracts.keys)[section]
+        return countriesSorted[section]
     }
     
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let country = Array(contracts.keys)[indexPath.section]
+        let country = countriesSorted[indexPath.section]
         
         guard let contractsListForCountry = contracts[country] else {return}
         
