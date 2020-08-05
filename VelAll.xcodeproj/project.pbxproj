@@ -16,6 +16,8 @@
 		4B1C259224D9EEAB00E6992B /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1C259124D9EEAB00E6992B /* Contract.swift */; };
 		4B1C259524D9F0C100E6992B /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1C259424D9F0C100E6992B /* Station.swift */; };
 		4B1C259824DB431600E6992B /* DataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1C259724DB431600E6992B /* DataRetriever.swift */; };
+		4B1C259A24DB4D1D00E6992B /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1C259924DB4D1D00E6992B /* NetworkModel.swift */; };
+		4B1C259C24DB511F00E6992B /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1C259B24DB511F00E6992B /* ApiKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		4B1C259124D9EEAB00E6992B /* Contract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
 		4B1C259424D9F0C100E6992B /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		4B1C259724DB431600E6992B /* DataRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRetriever.swift; sourceTree = "<group>"; };
+		4B1C259924DB4D1D00E6992B /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		4B1C259B24DB511F00E6992B /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 			children = (
 				4B1C259124D9EEAB00E6992B /* Contract.swift */,
 				4B1C259424D9F0C100E6992B /* Station.swift */,
+				4B1C259924DB4D1D00E6992B /* NetworkModel.swift */,
+				4B1C259B24DB511F00E6992B /* ApiKey.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,9 +171,11 @@
 			files = (
 				4B1C259824DB431600E6992B /* DataRetriever.swift in Sources */,
 				4B1C258224D9DCAD00E6992B /* ViewController.swift in Sources */,
+				4B1C259C24DB511F00E6992B /* ApiKey.swift in Sources */,
 				4B1C259524D9F0C100E6992B /* Station.swift in Sources */,
 				4B1C257E24D9DCAD00E6992B /* AppDelegate.swift in Sources */,
 				4B1C258024D9DCAD00E6992B /* SceneDelegate.swift in Sources */,
+				4B1C259A24DB4D1D00E6992B /* NetworkModel.swift in Sources */,
 				4B1C259224D9EEAB00E6992B /* Contract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

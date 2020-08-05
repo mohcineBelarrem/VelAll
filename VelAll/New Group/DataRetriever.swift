@@ -10,12 +10,7 @@ import Foundation
 
 
 
-enum NetworkError: Error {
-    case badURL
-    case badData
-    case badJSON
-    case unknown(description : String)
-}
+
 
 
 
@@ -23,8 +18,14 @@ struct DataRetriever {
     
     static func fetchContracts(completionHandler: @escaping (Result<[Contract], NetworkError>) -> Void) {
         
-        guard let url = URL(string: Model.baseURL) else {
-            
+        var components = URLComponents()
+        
+        components.scheme = NetworkModel.scheme
+        components.host = NetworkModel.baseHost
+        components.path = NetworkModel.contractsPath
+        components.queryItems = [NetworkModel.apiKeyQueryItem]
+        
+        guard let url = components.url else {
             completionHandler(.failure(.badURL))
             return
         }
