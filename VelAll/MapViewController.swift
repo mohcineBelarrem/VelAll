@@ -16,6 +16,7 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    public static var colorCriterium : MapAnnotationColorCriterium = .availableBikes
     
    override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +64,19 @@ class MapViewController: UIViewController {
             
         }
     
+    @IBAction func switchChanged(_ sender: UISegmentedControl) {
+        
+        switch sender.selectedSegmentIndex {
+        case 1:
+            MapViewController.colorCriterium = .availableBikeStands
+        default:
+            MapViewController.colorCriterium = .availableBikes
+        }
+        
+        mapView.refresh()
+        
+    }
+
 }
 
 
@@ -73,6 +87,13 @@ private extension MKMapView {
                                               longitudinalMeters: regionRadius)
     setRegion(coordinateRegion, animated: true)
   }
+    
+    func refresh() {
+        for annotation in annotations {
+            removeAnnotation(annotation)
+            addAnnotation(annotation)
+        }
+    }
 }
 
 
