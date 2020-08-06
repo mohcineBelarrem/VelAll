@@ -60,12 +60,25 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aVL-y3-gim">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                             </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4oI-iD-vCn">
+                                <rect key="frame" x="323" y="108" width="75" height="32"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="🚲"/>
+                                    <segment title="🅿️"/>
+                                </segments>
+                                <connections>
+                                    <action selector="switchChanged:" destination="AKK-kD-XUf" eventType="valueChanged" id="Kzq-IZ-VZN"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="aVL-y3-gim" firstAttribute="top" secondItem="gxH-aX-iR0" secondAttribute="top" id="Cx0-v1-317"/>
+                            <constraint firstItem="gxH-aX-iR0" firstAttribute="trailing" secondItem="4oI-iD-vCn" secondAttribute="trailing" constant="16" id="EJ5-14-NHP"/>
                             <constraint firstAttribute="bottom" secondItem="aVL-y3-gim" secondAttribute="bottom" id="MDH-IO-O13"/>
                             <constraint firstItem="aVL-y3-gim" firstAttribute="leading" secondItem="gxH-aX-iR0" secondAttribute="leading" id="cKx-4r-MsK"/>
+                            <constraint firstItem="4oI-iD-vCn" firstAttribute="top" secondItem="gxH-aX-iR0" secondAttribute="top" constant="20" id="gsa-fF-2LQ"/>
                             <constraint firstItem="aVL-y3-gim" firstAttribute="trailing" secondItem="gxH-aX-iR0" secondAttribute="trailing" id="qvQ-Rm-78g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gxH-aX-iR0"/>
