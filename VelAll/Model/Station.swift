@@ -80,6 +80,11 @@ class MapStation : NSObject,MKAnnotation {
 }
 
 
+enum MapAnnotationColorCriterium {
+    case availableBikes
+    case availableBikeStands
+}
+
 class MapStationAnnotationView: MKMarkerAnnotationView {
     override var annotation: MKAnnotation? {
         willSet {
@@ -91,8 +96,10 @@ class MapStationAnnotationView: MKMarkerAnnotationView {
             calloutOffset = CGPoint(x: -5, y: 5)
             rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
             
-            markerTintColor = mapStation.markerTintColor(criterium: mapStation.availableBikes)
-            glyphText = String(mapStation.availableBikes)
+            let criterium = MapViewController.colorCriterium == .availableBikes ? mapStation.availableBikes : mapStation.availableBikeStands
+            
+            markerTintColor = mapStation.markerTintColor(criterium: criterium)
+            glyphText = String(criterium)
             
         }
     }
